@@ -1,0 +1,8 @@
+title: HydroUAI
+description: Site do grupo HydroUAI
+# If this is a project site (username.github.io/repo), set baseurl: "/<repo>"
+# If this is a user/organization site (hydrouai.github.io), leave baseurl: ""
+baseurl: ""
+url: ""
+theme: null
+markdown: kramdown
