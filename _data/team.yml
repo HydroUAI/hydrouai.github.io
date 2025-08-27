@@ -1,0 +1,23 @@
+- name: André Ferreira
+  role: ""
+  headshot: "/assets/img/team/andre.jpg"
+  research_focus: ""
+  links: { email: "", linkedin: "" }
+
+- name: Bruno Brentan
+  role: ""
+  headshot: "/assets/img/team/bruno.jpg"
+  research_focus: ""
+  links: { email: "", linkedin: "" }
+
+- name: Gustavo Meirelles
+  role: ""
+  headshot: "/assets/img/team/gustavo.jpg"
+  research_focus: ""
+  links: { email: "", linkedin: "" }
+
+- name: Rodrigo Perdigão
+  role: ""
+  headshot: "/assets/img/team/rodrigo.jpg"
+  research_focus: ""
+  links: { email: "", linkedin: "" }
