@@ -1,19 +1,56 @@
 :root{
-  /* palette from the logo */
-  --primary:#0C2952; --secondary:#5E728A; --muted:#8FA1AF;
-  --bg:#FEFEFE; --text:#1A1A1A;
-  --border:#E6EAF0; --radius:16px; --maxw:1100px;
+  /* Paleta (identidade visual) */
+  --primary:#0C2952;         /* pode manter para botões/destaques */
+  --bg:#012557;              /* azul escuro do fundo */
+  --text:#F3F6FA;            /* texto claro no tema escuro */
+  --muted:#BFD0E3;           /* textos secundários */
+  --border:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.04);
+  --radius:16px; --maxw:1100px;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial}
-a{color:var(--primary);text-decoration:none}
-.logo{height:28px;vertical-align:middle;margin-right:8px}
-.site-header,.site-footer{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
-.nav,.content,.site-footer{max-width:var(--maxw);margin:0 auto;padding:16px 24px}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:700;color:var(--primary);display:flex;align-items:center}
-.content{padding-top:24px;padding-bottom:24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-.avatar{width:100%;aspect-ratio:1/1;border-radius:12px;background:linear-gradient(160deg,#F0F4F9,#E5ECF4);display:flex;align-items:center;justify-content:center;color:var(--secondary);font-weight:600;font-size:28px;border:1px dashed #CAD3DF}
-.hero{border:1px solid var(--border);border-radius:var(--radius);padding:24px;background:linear-gradient(180deg,#FFFFFF,#F6F8FB)}
+
+/* Fonte global */
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.6 "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Links com foco/hover visível no escuro */
+a{ color:#A7C7FF; text-decoration:none; }
+a:hover, a:focus{ text-decoration:underline; }
+
+/* Cabeçalho e rodapé com leve translúcido para separar do fundo */
+.site-header,.site-footer{
+  background:rgba(0,0,0,.12);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+/* Cartões e grelha */
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px }
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  backdrop-filter: blur(4px);
+}
+
+/* Avatar com contorno visível em fundo escuro */
+.avatar{
+  width:100%; aspect-ratio:1/1; border-radius:12px;
+  background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  display:flex; align-items:center; justify-content:center;
+  color:#BFD0E3; font-weight:600; font-size:28px;
+  border:1px dashed rgba(255,255,255,.25);
+}
+
+/* Hero */
+.hero{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+}
